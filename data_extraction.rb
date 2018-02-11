@@ -1,3 +1,4 @@
+
 $sdc = 0
 $must_have = []
 $cannot_be_together = []
@@ -11,6 +12,7 @@ def parse_input_file(file_path)
         x.strip!.to_i
       end
       line.shift
+      line.map!(&:to_i)
       t_s.push line
     end
   f.close
