@@ -1,6 +1,6 @@
 require "./data_extraction"
 
-transactions = parse_input_file("input-data.txt")
+$transactions = parse_input_file("input-data.txt")
 $itemSet, $misHash = parse_parameter_file("parameter-file.txt")
 
 def sort_items_with_mis(transactions)
@@ -54,8 +54,43 @@ def freq_one_item_sets(transactions)
   return []
 end
 
+def support_of(item)
+  return @support_count[item].fdiv($transactions.length)
+end
 
-sorted_mis_list = sort_items_with_mis(transactions)
-init_pass(sorted_mis_list, transactions)
-freq_one_item_sets(transactions)
+def support_count_of(item)
+  return @support_count[item]
+end
 
+def does_match_unique_last_item_constraint(freq_set_one, freq_set_two)
+  freq_set_len = freq_set_one.length
+  for i in 0..freq_set_len
+    if i == freq_set_len-1
+      if freq_set_one[i] == freq_set_two[i]
+        return false
+      end
+    else
+      if freq_set_one[i] != freq_set_two[i]
+        return false
+      end
+    end
+  end
+  return true
+end
+
+=begin
+def multiple_support_candidate_generation(freq_item_set)
+  freq_set_len = freq_set_one.length
+  for f1 in freq_item_set
+    for f2 in freq_set_len[i+1..freq_set_len]
+      if(f1[-1] < f2[-1] and (support_of(f1[-1]) - support_of(f2[-1])) < $sdc)
+      end
+    end
+  end
+end
+=end
+
+sorted_mis_list = sort_items_with_mis($transactions)
+init_pass(sorted_mis_list, $transactions)
+freq_one_item_sets($transactions)
+#puts does_match_unique_last_item_constraint([10,20],[20,30])
