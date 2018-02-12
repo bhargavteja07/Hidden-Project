@@ -87,6 +87,19 @@ def is_contained_in_transactions(candidate,transaction)
   return false
 end
 
+def does_contain_required(item_set)
+  if((item_set & $must_have).length >= 1)
+    return true
+  end
+  return false
+end
+
+def does_contain_invalid(item_set)
+  if (item_set - $cannot_be_together).length == 0
+    return true
+  end
+  return false
+end
 
 def freq_item_generation(candidate_set)
 

@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="75a9cebb-6e95-4442-810a-94507459c7c7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/ms-apriori-utilities.rb" afterPath="$PROJECT_DIR$/ms-apriori-utilities.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,8 +35,8 @@
       <file leaf-file-name="data_extraction.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_extraction.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="55" column="8" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="8" />
+            <state relative-caret-position="261">
+              <caret line="46" column="29" lean-forward="false" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -46,8 +45,8 @@
       <file leaf-file-name="ms-apriori-utilities.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ms-apriori-utilities.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="104" column="23" lean-forward="false" selection-start-line="104" selection-start-column="23" selection-end-line="104" selection-end-column="23" />
+            <state relative-caret-position="146">
+              <caret line="101" column="3" lean-forward="false" selection-start-line="101" selection-start-column="3" selection-end-line="101" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -90,6 +89,7 @@
       <find>$itemSet</find>
       <find>itemSet</find>
       <find>misHash</find>
+      <find>must</find>
     </findStrings>
     <replaceStrings>
       <replace>[</replace>
@@ -268,12 +268,12 @@
       <option name="presentableId" value="Default" />
       <updated>1518300964090</updated>
       <workItem from="1518300965986" duration="11180000" />
-      <workItem from="1518381451934" duration="5044000" />
+      <workItem from="1518381451934" duration="5505000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16224000" />
+    <option name="totallyTimeSpent" value="16685000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="43" width="1400" height="792" extended-state="0" />
@@ -369,14 +369,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_extraction.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="55" column="8" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ms-apriori-main.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -385,10 +377,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data_extraction.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="46" column="29" lean-forward="false" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ms-apriori-utilities.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="104" column="23" lean-forward="false" selection-start-line="104" selection-start-column="23" selection-end-line="104" selection-end-column="23" />
+        <state relative-caret-position="146">
+          <caret line="101" column="3" lean-forward="false" selection-start-line="101" selection-start-column="3" selection-end-line="101" selection-end-column="3" />
           <folding />
         </state>
       </provider>
