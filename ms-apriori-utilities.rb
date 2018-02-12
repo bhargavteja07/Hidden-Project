@@ -78,6 +78,33 @@ def does_match_unique_last_item_constraint(freq_set_one, freq_set_two)
   return true
 end
 
+
+def is_contained_in_transactions(candidate,transaction)
+
+  if (candidate - transaction).length == 0
+    return true
+  end
+  return false
+end
+
+
+def freq_item_generation(candidate_set)
+
+  @candidate_count = Hash.new 0
+
+  for transaction in $transactions
+    for candidate in candidate_set
+      if is_contained_in_transactions(candidate,transaction)
+        @candidate_count[candidate] += 1
+      end
+      if is_contained_in_transactions(candidate.drop(1),transaction)
+        @candidate_count[candidate.drop(1)] += 1
+      end
+    end
+  end
+  puts @candidate_count
+end
+
 =begin
 def multiple_support_candidate_generation(freq_item_set)
   freq_set_len = freq_set_one.length
@@ -94,3 +121,6 @@ sorted_mis_list = sort_items_with_mis($transactions)
 init_pass(sorted_mis_list, $transactions)
 freq_one_item_sets($transactions)
 #puts does_match_unique_last_item_constraint([10,20],[20,30])
+puts [[10,20]] - [[10,20,30],[20,30]]
+
+#freq_item_generation([[100,140]])

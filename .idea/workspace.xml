@@ -16,7 +16,7 @@
     <SUITE FILE_PATH="coverage/MS_Apriori@ms_apriori_utilities.coverage" NAME="ms-apriori-utilities Coverage Results" MODIFIED="1518381344041" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MS-Apriori" />
     <SUITE FILE_PATH="coverage/MS_Apriori@data_extraction.coverage" NAME="data_extraction Coverage Results" MODIFIED="1518381469512" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MS-Apriori" />
     <SUITE FILE_PATH="coverage/MS_Apriori@init_pass.coverage" NAME="init_pass Coverage Results" MODIFIED="1518378756345" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MS-Apriori" />
-    <SUITE FILE_PATH="coverage/MS_Apriori@ms_apriori_utilities__1_.coverage" NAME="ms-apriori-utilities (1) Coverage Results" MODIFIED="1518384186660" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MS-Apriori" />
+    <SUITE FILE_PATH="coverage/MS_Apriori@ms_apriori_utilities__1_.coverage" NAME="ms-apriori-utilities (1) Coverage Results" MODIFIED="1518394874303" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="MS-Apriori" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -36,8 +36,8 @@
       <file leaf-file-name="data_extraction.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_extraction.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+            <state relative-caret-position="386">
+              <caret line="55" column="8" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -46,8 +46,8 @@
       <file leaf-file-name="ms-apriori-utilities.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ms-apriori-utilities.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="85" column="78" lean-forward="false" selection-start-line="85" selection-start-column="78" selection-end-line="85" selection-end-column="78" />
+            <state relative-caret-position="290">
+              <caret line="104" column="23" lean-forward="false" selection-start-line="104" selection-start-column="23" selection-end-line="104" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -268,12 +268,12 @@
       <option name="presentableId" value="Default" />
       <updated>1518300964090</updated>
       <workItem from="1518300965986" duration="11180000" />
-      <workItem from="1518381451934" duration="2512000" />
+      <workItem from="1518381451934" duration="5044000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13692000" />
+    <option name="totallyTimeSpent" value="16224000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="43" width="1400" height="792" extended-state="0" />
@@ -307,7 +307,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -371,8 +371,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data_extraction.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        <state relative-caret-position="386">
+          <caret line="55" column="8" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -387,8 +387,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ms-apriori-utilities.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="85" column="78" lean-forward="false" selection-start-line="85" selection-start-column="78" selection-end-line="85" selection-end-column="78" />
+        <state relative-caret-position="290">
+          <caret line="104" column="23" lean-forward="false" selection-start-line="104" selection-start-column="23" selection-end-line="104" selection-end-column="23" />
           <folding />
         </state>
       </provider>
