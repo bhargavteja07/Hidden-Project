@@ -41,8 +41,8 @@ def parse_parameter_file(file_path)
         x1 = l.scan(/\{(.*?)\}/)
         x1.each do |x|
           x2 = x[0].split(',')
-          x2.each do |e|
-            e.strip!.to_i
+          (0..x2.length-1).step(1) do |i|
+            x2[i] = x2[i].to_i
           end
           $cannot_be_together.push(x2)
         end
@@ -52,5 +52,6 @@ def parse_parameter_file(file_path)
   return i_s, mis
 end
 
-transaction_set = parse_input_file("input-data.txt")
-item_set, minimum_item_suport = parse_parameter_file("parameter-file.txt")
+#transaction_set = parse_input_file("input-data.txt")
+#item_set, minimum_item_suport = parse_parameter_file("parameter-file.txt")
+#print $cannot_be_together

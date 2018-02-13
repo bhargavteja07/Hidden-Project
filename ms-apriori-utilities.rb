@@ -48,7 +48,7 @@ def freq_one_item_sets(transactions)
     end
   end
   if( (freq_one_item & $must_have).length >= 1)
-    return freq_one_item
+    return (freq_one_item & $must_have)
   end
 
   return []
@@ -95,8 +95,12 @@ def does_contain_required(item_set)
 end
 
 def does_contain_invalid(item_set)
-  if (item_set - $cannot_be_together).length == 0
-    return true
+
+  for i in $cannot_be_together
+    #print i
+    if (i - item_set).length == 0
+      return true
+    end
   end
   return false
 end
@@ -115,7 +119,7 @@ def freq_item_generation(candidate_set)
       end
     end
   end
-  puts @candidate_count
+  @candidate_count
 end
 
 =begin
@@ -134,6 +138,9 @@ sorted_mis_list = sort_items_with_mis($transactions)
 init_pass(sorted_mis_list, $transactions)
 freq_one_item_sets($transactions)
 #puts does_match_unique_last_item_constraint([10,20],[20,30])
-puts [[10,20]] - [[10,20,30],[20,30]]
+#puts [[10,20]] - [[10,20,30],[20,30]]
 
+#puts does_contain_invalid([[20, 40]])
 #freq_item_generation([[100,140]])
+
+#puts does_contain_invalid([70,80])

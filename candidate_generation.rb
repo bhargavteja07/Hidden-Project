@@ -1,31 +1,8 @@
-list = [100,140,70,80,90,120,20,30,50,10]
-$count = {}
-$count[10] = 2
-$count[20] = 6
-$count[30] = 3
-$count[40] = 0
-$count[50] = 2
-$count[60] = 0
-$count[70] = 3
-$count[80] = 6
-$count[90] = 2
-$count[100] = 1
-$count[120] = 1
-$count[140] = 1
-$n = 6
-$mis = {}
-$mis[10] = 0.43
-$mis[20] = 0.3
-$mis[30] = 0.3
-$mis[40] = 0.4
-$mis[50] = 0.4
-$mis[60] = 0.3
-$mis[70] = 0.2
-$mis[80] = 0.2
-$mis[90] = 0.2
-$mis[100] = 0.1
-$mis[120] = 0.2
-$mis[140] = 0.15
+require "./ms-apriori-utilities"
+
+$count = @support_count
+$mis = $misHash
+$n = $transactions.length
 
 def level2_candidate_generation(list, sdc)
   c2 = []
@@ -85,7 +62,7 @@ def MS_candidate_generation(frequent_set, sdc)
   ck
 end
 
-freq = [[100,140],[70,30],[80,20],[80,50]]
-c = level2_candidate_generation(list, 0.1)
-ck = MS_candidate_generation(freq,0.1)
-print ck
+
+#c = level2_candidate_generation(list, 0.1)
+#ck = MS_candidate_generation(freq,0.1)
+#print ck
