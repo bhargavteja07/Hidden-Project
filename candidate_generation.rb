@@ -55,21 +55,37 @@ def MS_candidate_generation(frequent_set, sdc)
     while j < len
       if i != j
         x = frequent_set[i] & frequent_set[j]
-        i_last = frequent_set[i].last
-        j_last = frequent_set[j].last
-        if x.length == len-1 and i_last != j_last
-          support_i = $count[i_last].fdiv($n)
-          support_j = $count[j_last].fdiv($n)
-          if i_last < j_last and (support_i - support_j).abs <= sdc
-            x.push(i_last)
-            x.push(j_last)
-            ck.push(c)
+        if (x[0] == frequent_set[i][0]) && (x[0] == frequent_set[j][0])
+          i_last = frequent_set[i].last
+          j_last = frequent_set[j].last
+          if x.length == frequent_set[i].length-1 and i_last != j_last
+            support_i = $count[i_last].fdiv($n)
+            support_j = $count[j_last].fdiv($n)
+            if i_last < j_last and (support_i - support_j).abs <= sdc
+              x.push(i_last)
+              x.push(j_last)
+              ck.push(x)
+              (0..x.length-1).step(1) do |i|
+                s = x[0..x.length]
+                s.delete(x[i])
+                if s.include? x[0] or ($mis[x[1]] == $mis[x[0]])
+                  if not frequent_set.include? s
+                    ck.delete(x)
+                  end
+                end
+              end
+            end
           end
         end
       end
+      j += 1
     end
+    i += 1
   end
+  ck
 end
 
+freq = [[100,140],[70,30],[80,20],[80,50]]
 c = level2_candidate_generation(list, 0.1)
-print c
+ck = MS_candidate_generation(freq,0.1)
+print ck
