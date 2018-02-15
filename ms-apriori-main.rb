@@ -25,9 +25,12 @@ def ms_apriori
     else
       curr_candidate_k = MS_candidate_generation(curr_freq_set,$sdc)
     end
-    #print(curr_candidate_k)
+
     @support_count_freq_items = freq_item_generation(curr_candidate_k)
     curr_freq_set = fk_generation(curr_candidate_k)
+    print(curr_freq_set)
+    print("\n")
+
     @global_freq_set.push(curr_freq_set)
     if curr_freq_set.length > 0
       @output += "Frequent #{k}-itemsets\n\n"
@@ -39,7 +42,7 @@ def ms_apriori
       end
       @output = @output[0..-2]
       @output += "}\n"
-      @output += "Tailcount = #{@support_count[x[1]]}\n"
+      @output += "Tailcount = #{@candidate_count[x[1..-1]]}\n"
     end
     if curr_freq_set.length > 0
       @output += "\n     Total number of frequent #{k}-itemsets = #{curr_freq_set.length}\n\n"
