@@ -58,7 +58,7 @@ def ms_apriori
     #print "-- #{$global_support_count_freq_items} \n"
     count = 0
     for x in curr_freq_set
-      if (x - $must_have).length != x.length and does_contain_invalid(x) == false
+      if ($must_have.length == 0 or (x - $must_have).length != x.length) and does_contain_invalid(x) == false
       count += 1
       @output += "     #{@support_count_freq_items[x]} : {"
       $global_support_count_freq_items[x] = @support_count_freq_items[x]

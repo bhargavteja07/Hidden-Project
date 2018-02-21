@@ -6,6 +6,7 @@ if input.length != 2
   abort
 end
 
+
 $transactions = parse_input_file(input[0])
 $itemSet, $misHash = parse_parameter_file(input[1])
 
@@ -28,8 +29,7 @@ def init_pass(sorted_item_list, transactions)
 
   @init_pass_list = []
 
-  for i in 0..sorted_item_list.length
-    puts
+  for i in 0..sorted_item_list.length-1
     if (@support_count[sorted_item_list[i]].fdiv(no_of_transactions)) >= $misHash[sorted_item_list[i]]
       @init_pass_list.push(sorted_item_list[i])
       break
@@ -54,7 +54,10 @@ def freq_one_item_sets(transactions)
       freq_one_item.push(l)
     end
   end
-  if( (freq_one_item & $must_have).length >= 1)
+  if $must_have.length == 0
+    return freq_one_item
+  end
+  if((freq_one_item & $must_have).length >= 1)
     return (freq_one_item & $must_have)
   end
 
@@ -95,7 +98,7 @@ def is_contained_in_transactions(candidate,transaction)
 end
 
 def does_contain_required(item_set)
-  if((item_set & $must_have).length >= 1)
+  if $must_have.length == 0 or ((item_set & $must_have).length >= 1)
     return true
   end
   return false
