@@ -19,9 +19,11 @@ def level2_candidate_generation(list, sdc)
       end
     end
   end
+  #print "c2 length #{c2.length} \n"
+  #print  "#{$count[4].fdiv($n)} ----- #{$count[19].fdiv($n)}"
   c2
-
 end
+
 
 def MS_candidate_generation(frequent_set, sdc)
   ck = []
@@ -37,7 +39,7 @@ def MS_candidate_generation(frequent_set, sdc)
 
           i_last = frequent_set[i].last
           j_last = frequent_set[j].last
-          if x.length == frequent_set[i].length-1 and i_last != j_last
+          if i_last != j_last
             support_i = $count[i_last].fdiv($n)
             support_j = $count[j_last].fdiv($n)
             if (support_i - support_j).abs <= sdc
@@ -61,6 +63,8 @@ def MS_candidate_generation(frequent_set, sdc)
     end
     i += 1
   end
+
+  #print "ck length #{ck.length} \n"
   ck
 end
 
