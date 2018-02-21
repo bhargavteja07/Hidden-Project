@@ -1,7 +1,13 @@
 require "./data_extraction"
 
-$transactions = parse_input_file("input-data.txt")
-$itemSet, $misHash = parse_parameter_file("parameter-file.txt")
+input = ARGV
+if input.length != 2
+  puts "Invalid no. of arguments"
+  abort
+end
+
+$transactions = parse_input_file(input[0])
+$itemSet, $misHash = parse_parameter_file(input[1])
 
 def sort_items_with_mis(transactions)
   @item_list = $misHash.keys
