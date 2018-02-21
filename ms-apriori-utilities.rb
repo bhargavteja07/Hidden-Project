@@ -11,7 +11,8 @@ $itemSet, $misHash = parse_parameter_file(input[1])
 
 def sort_items_with_mis(transactions)
   @item_list = $misHash.keys
-  sorted_item_list = @item_list.sort {|a,b| $misHash[a] <=> $misHash[b]}
+  sorted_item_list = @item_list.sort_by {|a| [$misHash[a], a]}
+  #print sorted_item_list
   return sorted_item_list
 end
 
