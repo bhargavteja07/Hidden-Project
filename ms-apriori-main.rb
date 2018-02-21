@@ -72,7 +72,10 @@ def ms_apriori
     end
     if count > 0
       @output += "\n     Total number of frequent #{k}-itemsets = #{count}\n\n"
+    else
+      @output.sub!("Frequent #{k}-itemsets\n\n", "")
     end
+
     k += 1
     #curr_freq_set = []
   end

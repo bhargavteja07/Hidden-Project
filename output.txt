@@ -12,6 +12,4 @@ Tailcount = 2
 
      Total number of frequent 2-itemsets = 2
 
-Frequent 3-itemsets
-
 ....
