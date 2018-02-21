@@ -95,6 +95,7 @@ end
 
 ms_apriori
 @output += "...."
+print "\n ******  Frequent items are successfully generated for your inputs. Please Check the output.txt file  **** \n"
 
 
 File.open("output.txt", 'w') { |file| file.write(@output) }
